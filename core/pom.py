@@ -28,4 +28,4 @@ class BasePage:
                 self.driver.find_element(By.XPATH, loc)
 
     def test_master(self):
-        print("切换dev2分支，并修改test_master")
+        print("dev分支也修改test_master")
