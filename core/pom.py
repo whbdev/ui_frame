@@ -27,7 +27,3 @@ class BasePage:
                 loc = getattr(self, attr)
                 self.driver.find_element(By.XPATH, loc)
 
-    def test_master(self):
-        print("dev2更新第一次")
-        print("dev第一次更新")
-
