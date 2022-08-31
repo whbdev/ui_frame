@@ -27,5 +27,6 @@ class BasePage:
                 loc = getattr(self, attr)
                 self.driver.find_element(By.XPATH, loc)
 
-    def find_element(self):
-        pass
+    def find_element(self, driver, el):
+        driver.find_element(By.XPATH, el)
+
