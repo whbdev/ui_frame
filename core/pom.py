@@ -23,7 +23,9 @@ class BasePage:
         检查是否有元素丢失
         """
         for attr in dir(self):
-            if attr.startswith("ele_"): # 我们定义的元素属性
+            if attr.startswith("ele_"):  # 我们定义的元素属性
                 loc = getattr(self, attr)
                 self.driver.find_element(By.XPATH, loc)
 
+    def find_element(self):
+        pass
