@@ -29,3 +29,5 @@ class BasePage:
 
     def test_master(self):
         print("dev2更新第一次")
+        print("dev第一次更新")
+
