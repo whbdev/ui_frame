@@ -28,4 +28,4 @@ class BasePage:
                 self.driver.find_element(By.XPATH, loc)
 
     def test_master(self):
-        print("master更新第一次")
+        print("dev2更新第一次")
