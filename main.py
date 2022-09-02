@@ -6,7 +6,7 @@ import pytest
 if __name__ == '__main__':
     pytest.main()
     '''
-    os.system('allure generate temp -o reports --clean')
+    os.system('allure generate temp -o report --clean')
     # 打开报告
-    os.system('allure open reports -p 0')
+    os.system('allure open report -p 0')
     '''
