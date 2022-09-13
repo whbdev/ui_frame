@@ -12,7 +12,7 @@ from core import pom
 logger = logging.getLogger(__name__)
 
 
-def test_login(driver):
+def atest_login(driver):
     """登录"""
     driver.get("http://101.34.221.219:8010/")
 
@@ -25,7 +25,7 @@ def test_login(driver):
     assert '登录成功' == msg
 
 
-def test_goods_favor(user_driver, clear_favor):
+def atest_goods_favor(user_driver, clear_favor):
     """商品收藏"""
     user_driver.get("http://101.34.221.219:8010/?s=goods/index/id/5.html")
     page = pom.GoodsPage(user_driver)
