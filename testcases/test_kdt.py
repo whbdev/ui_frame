@@ -2,6 +2,8 @@
 # @Author : WangHongBing
 # @File : test_kdt.py
 # @CreateTime : 2022/9/7 9:06:29
+from webdriver_helper import debugger
+
 from core.kdt import KeyWord
 
 
@@ -43,7 +45,10 @@ def test_update_user_avatar(user_driver):
     kw = KeyWord(user_driver)
     kw.key_get("http://101.34.221.219:8010/?s=personal/index.html")
     kw.key_click("/html/body/div[4]/div[3]/div/dl/dd[1]/span/a")
-    kw.key_input('//*[@id="user-avatar-popup"]/div/div[2]/form/div[2]/div/input', r"D:\1.png")
-    kw.key_click('//*[@id="user-avatar-popup"]/div/div[2]/form/button')
+    kw.key_js_code('//*[@id="user-avatar-popup"]/div/div[2]/form/div[2]/div/input',
+                   'arguments[0].style="position: static;"')
 
+    kw.key_input('//*[@id="user-avatar-popup"]/div/div[2]/form/div[2]/div/input', r"D:\test\1.png")
+    kw.key_click('//*[@id="user-avatar-popup"]/div/div[2]/form/button')
+    kw.key_click('/html/body/div[10]/button')
     kw.key_assert_text('//p[@class="prompt-msg"]', "上传成功")

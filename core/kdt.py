@@ -4,6 +4,7 @@
 # @CreateTime : 2022/9/7 8:55:20
 """Keyword Driver Testing"""
 import logging
+import time
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
@@ -25,6 +26,11 @@ class KeyWord:
 
     def key_get(self, url):
         self.driver.get(url)
+
+    def key_js_code(self, loc, code):
+        ele: WebElement = self.find_element(By.XPATH, loc)
+        self.driver.execute_script(code, ele)
+        time.sleep(1)
 
     def key_input(self, loc, content=None):
         ele = self.find_element(By.XPATH, loc)

@@ -3,3 +3,4 @@ webdriver-helper
 pytest-rerunfailures
 pytest-html
 allure-pytest
+openpyxl
